@@ -8,7 +8,7 @@ const Welcome = () => {
             <div className="welcome-content">
                 <h1>Welcome to Resume Builder</h1>
                 <p>Create professional resumes effortlessly with our easy-to-use builder.</p>
-                <button>Get Started</button>
+                <button onClick={() => navigate("/signup")}>Get Started</button>
             </div>
         </div>
     );
