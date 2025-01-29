@@ -5,24 +5,32 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const navigator = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:4001/login", {
-        email:email,
-        password:password,
+        email: email,
+        password: password,
       });
-
       console.log(response.data);
-      alert("Login Successful!");
+      if (response.data.isvalid) {
+        alert("Login Successful!");
+        navigator('/home')
+      }
+      else {
+        alert("Login failed!")
+      }
+
+
     } catch (err) {
       alert("Invalid email or password!");
     }
   };
 
   return (
+    <div className="signup-page">
     <div className="signup">
       <h2>Login Page</h2>
       <form onSubmit={handleSubmit}>
@@ -48,6 +56,7 @@ const Login = () => {
         </div>
         <button type="submit" className="btn">Login</button>
       </form>
+    </div>
     </div>
   );
 };

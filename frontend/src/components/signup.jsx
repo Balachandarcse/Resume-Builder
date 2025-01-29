@@ -11,14 +11,21 @@ const Signup=()=>{
     const handleSubmit=async (e)=>{
         e.preventDefault();
         try{
-            const req= await axios.post("http://localhost:4001/signup",{
+            const res= await axios.post("http://localhost:4001/signup",{
                 firstname:firstname,
                 lastname:lastname,
                 email:email,
                 password:password
             })
-            console.log(req.data)
-            navigator('/login')
+            console.log(res.data)
+            if(res.data.isvalid){
+                alert("account created Successfully!");
+                navigator('/home');
+            }
+            else{
+                alert("account creation failed!")
+            }
+            
         }catch(err){
             console.log(err);
         }
@@ -26,7 +33,7 @@ const Signup=()=>{
     }
 
     return (
-    
+        <div className="signup-page">
         <div className="signup">
             <h2>SignUp page</h2>
             <form onSubmit={handleSubmit}>
@@ -51,7 +58,7 @@ const Signup=()=>{
             <Link to="/login">already have a account?</Link>
 
         </div>
-        
+        </div>
     )
 }
 
