@@ -1,9 +1,5 @@
 import { useLocation } from "react-router-dom";
 import { useRef } from "react";
-import { useReactToPrint } from "react-to-print";
-import mordern from "../assets/mordernResume.png"
-import classic from "../assets/classicalResume.png"
-import creative from "../assets/creativeResume.png"
 import "../css/resume.css"
 import Navbar from "./Navbar";
 
@@ -36,7 +32,6 @@ const PreviewResume = () => {
                     <p>{formData.skills}</p>
                 </div>
             </div>
-            {/* <button >Download as PDF</button> */}
         </div>
         </div>
     );
