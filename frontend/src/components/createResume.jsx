@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../css/resume.css"
 import axios from 'axios'
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 
 const CreateResume = () => {
     const navigate = useNavigate();

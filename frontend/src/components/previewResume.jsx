@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useRef } from "react";
 import "../css/resume.css"
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 
 
 

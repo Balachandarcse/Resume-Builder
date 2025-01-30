@@ -3,7 +3,7 @@ import mordern from "../assets/mordernResume.png"
 import classic from "../assets/classicalResume.png"
 import creative from "../assets/creativeResume.png"
 import "../css/template.css"
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 
 
 const templates = [
