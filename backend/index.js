@@ -99,7 +99,7 @@ app.post("/resume",async(req,res)=>{
             education:education,
             experience:experience,
             skills:skills,
-        })
+        }) 
         await newResume.save();
         res.status(201).json({message:"resume stored Successful!",isvalid:true});
 
