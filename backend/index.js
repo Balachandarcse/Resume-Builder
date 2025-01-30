@@ -11,7 +11,9 @@ const cors=require("cors")
 const app=express()
 
 dotenv.config();
-app.use(cors());
+app.use(cors({
+    origin:'https://resume-builder-6ofv.vercel.app/'
+}));
 app.use(express.urlencoded());
 app.use(express.json())
 
