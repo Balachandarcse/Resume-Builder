@@ -22,7 +22,7 @@ const Templates = () => {
         <div className="templates-container">
             <Navbar />
             <div className="templates-content">
-                <h1>Select a Resume Template</h1>
+                <h1 >Select a Resume Template</h1>
                 <div className="templates-grid">
                     {templates.map((template) => (
                         <div key={template.id} className="template-card" onClick={() => handleSelectTemplate(template.id)}>

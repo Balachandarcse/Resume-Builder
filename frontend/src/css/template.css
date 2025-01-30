@@ -1,5 +1,8 @@
 .templates-container {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background: url('../assets/bg_img2.png');
+    background-position: center;
+    background-size: cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,7 +17,9 @@
     text-align: center;
     padding: 20px;
 }
-
+.templates-content h1{
+    color:aliceblue
+}
 .templates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

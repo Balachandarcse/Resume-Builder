@@ -4,6 +4,7 @@ const mdb=require("mongoose")
 const dotenv=require("dotenv")
 const Signup=require("./models/UsersSchema")
 const Template=require("./models/Templates")
+const Resume=require("./models/resume")
 const bcrypt=require("bcrypt")
 const cors=require("cors")
 
@@ -30,7 +31,7 @@ app.post("/signup", async(req,res)=>{
         email:email,
         password:hashedPassword
     });
-    newCustomer.save();
+    await newCustomer.save();
     res.status(201).json({message:"SignUp Successful!",isvalid:true});
     console.log("value recived")
 }catch(e){
@@ -86,6 +87,27 @@ app.get("/getTemplates", async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+
+app.post("/resume",async(req,res)=>{
+    var {  name,email ,phone,summary,education,experience,skills}=req.body
+    try{
+        const newResume=new Resume({
+            name:name,
+            email:email,
+            phone:phone,
+            summary:summary,
+            education:education,
+            experience:experience,
+            skills:skills,
+        })
+        await newResume.save();
+        res.status(201).json({message:"resume stored Successful!",isvalid:true});
+
+    }
+    catch(e){
+        res.status(401).json({message:"resume storing unSuccessful!",isvalid:false})
+    }
+})
 
 app.listen(4001,()=>{
     console.log("server is started");

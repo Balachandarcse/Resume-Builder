@@ -13,7 +13,7 @@ const sampleResumes = [
 
 const Sample = () => {
   return (
-    <div>
+    <div className="sample-container">
       <Navbar />
       <div className="sample-resume-container">
         <h2>Sample Resumes</h2>

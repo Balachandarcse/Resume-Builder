@@ -2,8 +2,26 @@
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    text-align: center;
+    text-align: center;    
 }
+.form-container h2{
+    color:white;
+}
+.preview-bg{
+    background: url('../assets/bg_img2.png');
+    background-position: center;
+    background-size: cover;
+}
+.preview-container{
+    background-color: aliceblue;
+    color: black;
+}
+.resume-form {
+    background: url('../assets/bg_img2.png');
+    background-position: center;
+    background-size: cover;
+}
+
 .input-field, .textarea-field {
     width: 100%;
     padding: 10px;

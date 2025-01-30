@@ -1,5 +1,7 @@
 .signup-page{
-  background-color: rgb(218, 150, 62);
+  background: url('../assets/bg_img2.png');
+  background-position: center;
+  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;

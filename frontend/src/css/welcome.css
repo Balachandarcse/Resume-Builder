@@ -1,5 +1,7 @@
 .welcome-container {
-    background-color: antiquewhite;
+    background: url('../assets/bg_img2.png');
+    background-position: center;
+    background-size: cover;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,12 +22,12 @@
 
 .welcome-container h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #fffbfb;
 }
 
 .welcome-container p {
     font-size: 1.2rem;
-    color: #666;
+    color: #f5f4f4;
     margin-bottom: 20px;
 }
 
