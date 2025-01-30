@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4001/login", {
+      const response = await axios.post("https://resume-builder-dasn.onrender.com/login", {
         email: email,
         password: password,
       });
