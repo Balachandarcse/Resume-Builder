@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <Navbar />
+            <Navbar/>
             <div className="home-content">
                 <h1>Welcome to Resume Builder</h1>
                 <p>Create a professional resume effortlessly with our easy-to-use builder.</p>
