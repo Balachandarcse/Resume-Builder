@@ -1,57 +1,211 @@
-.form-container, .preview-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;    
-}
-.form-container h2{
-    color:white;
-}
-.preview-bg{
-    background: url('../assets/bg_img2.png');
-    background-position: center;
-    background-size: cover;
-}
-.preview-container{
-    background-color: aliceblue;
-    color: black;
-}
-.resume-form {
-    background: url('../assets/bg_img2.png');
-    background-position: center;
-    background-size: cover;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
 }
 
-.input-field, .textarea-field {
+.container ,.preview-bg{
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/bg_img2.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: #fff;
+    min-height: 100vh; 
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.form {
+    background-color: rgba(226, 209, 209, 0.9); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  
+}
+.form-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.input-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+.input-field {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
-.primary-button {
+.add-remove-btns button {
     padding: 10px 20px;
-    background: #007bff;
-    color: white;
+    background-color: #007BFF;
+    color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
 }
 
-.resume-preview {
-    border: 1px solid #ddd;
+.add-remove-btns button:hover {
+    background-color: #0056b3;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+
+.body-container {
+    font-family: Arial, sans-serif;
+    background-color: #cf9494;
+    margin: 0;
     padding: 20px;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+.resume-al{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    padding: 5px;
+    background-color: #007BFF;
+    color: #fafbfa;
+
+}
+.resume-container {
+    width: 700px;
+    background: #ffffff;
+    padding: 40px;
+    color:black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-name {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.resume-subtitle {
+    font-size: 16px;
+    color: #333;
+}
+
+.resume-contact {
+    font-size: 14px;
+    color: #666;
+}
+
+.resume-section {
     margin-top: 20px;
 }
 
-.resume-template {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+.resume-section-title {
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.resume-content {
-    padding: 20px;
+.resume-section-content {
+    margin-top: 10px;
+}
+
+.resume-job {
+    margin-bottom: 20px;
+}
+
+.resume-job-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.resume-job-position {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+.resume-job-list {
+    padding-left: 20px;
+}
+
+.resume-job-item {
+    margin-bottom: 5px;
+}
+
+.resume-achievement-list {
+    padding-left: 20px;
+}
+
+.resume-achievement-item {
+    margin-bottom: 5px;
 }

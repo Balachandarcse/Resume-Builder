@@ -14,9 +14,7 @@ const Header = () => {
         <li><Link to="/templates">Create Resume</Link></li>
       </ul>
       <div className="profile">
-        <Link to="/profile">
           <img src={img} alt="Profile" />
-        </Link>
       </div>
     </nav>
   );
