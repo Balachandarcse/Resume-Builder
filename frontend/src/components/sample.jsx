@@ -1,9 +1,9 @@
-// import React from "react";
-import Navbar from "./Navbar";
+
 import "../css/sample.css"
 import mordern from "../assets/mordernResume.png"
 import classic from "../assets/classicalResume.png"
 import creative from "../assets/creativeResume.png"
+import Navbar from "./Navbar";
 
 const sampleResumes = [
     { id: 1, name: "Modern Resume", image: mordern },

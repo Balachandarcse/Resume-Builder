@@ -4,6 +4,7 @@ import "../css/resume.css"
 import Navbar from "./Navbar";
 
 
+
 const PreviewResume = () => {
     const location = useLocation();
     const { formData, templateId } = location.state || {};
