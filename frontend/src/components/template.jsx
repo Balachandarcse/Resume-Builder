@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.jsx";
 import { useNavigate } from "react-router-dom";
 import mordern from "../assets/mordernResume.png"
 import classic from "../assets/classicalResume.png"
