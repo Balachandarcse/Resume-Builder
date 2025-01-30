@@ -3,7 +3,7 @@ import mordern from "../assets/mordernResume.png"
 import classic from "../assets/classicalResume.png"
 import creative from "../assets/creativeResume.png"
 import "../css/template.css"
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 
 const templates = [
@@ -21,7 +21,7 @@ const Templates = () => {
 
     return (
         <div className="templates-container">
-            <Navbar />
+           <Header/>
             <div className="templates-content">
                 <h1 >Select a Resume Template</h1>
                 <div className="templates-grid">

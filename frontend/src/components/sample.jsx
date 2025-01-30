@@ -3,7 +3,7 @@ import "../css/sample.css"
 import mordern from "../assets/mordernResume.png"
 import classic from "../assets/classicalResume.png"
 import creative from "../assets/creativeResume.png"
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 
 const sampleResumes = [
@@ -15,7 +15,7 @@ const sampleResumes = [
 const Sample = () => {
   return (
     <div className="sample-container">
-      <Navbar />
+      <Header/>
       <div className="sample-resume-container">
         <h2>Sample Resumes</h2>
         <div className="resume-grid">

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../css/nav.css";
 import img from "../assets/img.jpg"
 
-const Navbar = () => {
+const Header = () => {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -22,4 +22,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useRef } from "react";
 import "../css/resume.css"
-import Navbar from "./Navbar";
+import Header from "./Header";
 
 
 
@@ -17,7 +17,7 @@ const PreviewResume = () => {
 
     return (
         <div className="preview-bg"> 
-        <Navbar/>
+        <Header/>
         <div className="preview-container">
             <h2>Resume Preview</h2>
             <div className="resume-preview" ref={resumeRef}>

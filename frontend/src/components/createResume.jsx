@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../css/resume.css"
 import axios from 'axios'
-import Navbar from "./Navbar";
+import Header from "./Header";
+
 
 const CreateResume = () => {
     const navigate = useNavigate();
@@ -43,7 +44,7 @@ const CreateResume = () => {
 
     return (
         <div className="resume-form">
-            <Navbar/>
+            <Header/>
         <div className="form-container">
             <h2>Enter Your Details</h2>
             <form onSubmit={handleSubmit}>
