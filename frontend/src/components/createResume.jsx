@@ -48,7 +48,7 @@ const CreateResume = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const res= await axios.post("http://localhost:4001/resume",formData)
+            const res= await axios.post("https://resume-builder-dasn.onrender.com/resume",formData)
             console.log(res.data)
             if(res.data.isvalid){
                 alert("reusme stored Successfully!");

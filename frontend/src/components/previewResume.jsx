@@ -12,14 +12,12 @@ const PreviewResume = () => {
     if (!formData || Object.keys(formData).length === 0) {
         return <h2>No data available. Please fill out the form first.</h2>;
     }
-
-    // Function to download resume as PDF
     const downloadPDF = () => {
         const resumeContainer = document.getElementById("resume-container");
         html2canvas(resumeContainer, { scale: 2 }).then((canvas) => {
             const imgData = canvas.toDataURL("image/png");
             const pdf = new jsPDF("p", "mm", "a4");
-            const imgWidth = 210; // A4 width in mm
+            const imgWidth = 210; 
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
             pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
