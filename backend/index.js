@@ -12,7 +12,7 @@ const app=express()
 
 dotenv.config();
 app.use(cors({
-    origin:'https://resume-builder-azure-three.vercel.app/'
+    origin:'https://resume-builder-azure-three.vercel.app'
     
 }));
 app.use(express.urlencoded());
