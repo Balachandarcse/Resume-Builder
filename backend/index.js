@@ -11,10 +11,11 @@ const cors=require("cors")
 const app=express()
 
 dotenv.config();
-app.use(cors({
-    origin:'https://resume-builder-azure-three.vercel.app'
+// app.use(cors({
+//     origin:'https://resume-builder-azure-three.vercel.app'
     
-}));
+// }));
+app.use(cors());
 app.use(express.urlencoded());
 app.use(express.json())
 
@@ -92,24 +93,14 @@ app.get("/getTemplates", async (req, res) => {
 });
 
 app.post("/resume",async(req,res)=>{
-    var {  name,email ,phone,summary,education,experience,skills}=req.body
-    try{
-        const newResume=new Resume({
-            name:name,
-            email:email,
-            phone:phone,
-            summary:summary,
-            education:education,
-            experience:experience,
-            skills:skills,
-        }) 
-        await newResume.save();
-        res.status(201).json({message:"resume stored Successful!",isvalid:true});
-
-    }
-    catch(e){
-        res.status(401).json({message:"resume storing unSuccessful!",isvalid:false})
-    }
+        try {
+            const newResume = new Resume(req.body);
+            await newResume.save();
+            res.status(201).json({ message: "Resume saved successfully", resume: newResume,isvalid:true });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ message: "Server error", error: error.message ,isvalid:false});
+        }
 })
 
 app.listen(4001,()=>{
